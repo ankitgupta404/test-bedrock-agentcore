@@ -6,8 +6,9 @@ const app = new cdk.App();
 
 new ResearchAgentStack(app, 'ResearchAgentStack', {
   env: {
-    account: process.env.CDK_DEFAULT_ACCOUNT,
+    account: process.env.CDK_DEFAULT_ACCOUNT || '239055859299',
     region: process.env.CDK_DEFAULT_REGION || 'us-west-2',
   },
   description: 'Daily Research Agent with Personalized Summaries',
+  synthesizer: new cdk.CliCredentialsStackSynthesizer(),
 });
