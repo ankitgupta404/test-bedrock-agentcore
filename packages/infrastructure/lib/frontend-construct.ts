@@ -20,18 +20,11 @@ export class FrontendConstruct extends Construct {
       encryption: s3.BucketEncryption.S3_MANAGED,
     });
 
-    // CloudFront Origin Access Control
-    const oac = new cloudfront.S3OriginAccessControl(this, 'OAC', {
-      originAccessControlName: 'research-agent-oac',
-    });
-
-    // CloudFront Distribution
+    // CloudFront Distribution with S3BucketOrigin (OAC)
     this.distribution = new cloudfront.Distribution(this, 'Distribution', {
       comment: 'Research Agent Frontend',
       defaultBehavior: {
-        origin: cloudfront.S3BucketOrigin.withOriginAccessControl(this.bucket, {
-          originAccessControl: oac,
-        }),
+        origin: cloudfrontOrigins.S3BucketOrigin.withOriginAccessControl(this.bucket),
         viewerProtocolPolicy: cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
         cachePolicy: cloudfront.CachePolicy.CACHING_OPTIMIZED,
         allowedMethods: cloudfront.AllowedMethods.ALLOW_GET_HEAD,

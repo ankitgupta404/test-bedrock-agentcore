@@ -9,10 +9,17 @@ import {
 const USER_POOL_ID = import.meta.env.VITE_USER_POOL_ID || '';
 const CLIENT_ID = import.meta.env.VITE_USER_POOL_CLIENT_ID || '';
 
-const userPool = new CognitoUserPool({
-  UserPoolId: USER_POOL_ID,
-  ClientId: CLIENT_ID,
-});
+let userPool: CognitoUserPool | null = null;
+try {
+  if (USER_POOL_ID && CLIENT_ID) {
+    userPool = new CognitoUserPool({
+      UserPoolId: USER_POOL_ID,
+      ClientId: CLIENT_ID,
+    });
+  }
+} catch (e) {
+  console.warn('Cognito not configured:', e);
+}
 
 export interface AuthUser {
   email: string;
@@ -21,6 +28,11 @@ export interface AuthUser {
 
 export function signUp(email: string, password: string): Promise<void> {
   return new Promise((resolve, reject) => {
+    if (!userPool) {
+      reject(new Error('Authentication not configured. Please set VITE_USER_POOL_ID and VITE_USER_POOL_CLIENT_ID.'));
+      return;
+    }
+
     const attributes = [
       new CognitoUserAttribute({ Name: 'email', Value: email }),
     ];
@@ -37,6 +49,11 @@ export function signUp(email: string, password: string): Promise<void> {
 
 export function confirmSignUp(email: string, code: string): Promise<void> {
   return new Promise((resolve, reject) => {
+    if (!userPool) {
+      reject(new Error('Authentication not configured.'));
+      return;
+    }
+
     const cognitoUser = new CognitoUser({
       Username: email,
       Pool: userPool,
@@ -54,6 +71,11 @@ export function confirmSignUp(email: string, code: string): Promise<void> {
 
 export function signIn(email: string, password: string): Promise<CognitoUserSession> {
   return new Promise((resolve, reject) => {
+    if (!userPool) {
+      reject(new Error('Authentication not configured. Please set VITE_USER_POOL_ID and VITE_USER_POOL_CLIENT_ID.'));
+      return;
+    }
+
     const cognitoUser = new CognitoUser({
       Username: email,
       Pool: userPool,
@@ -76,6 +98,7 @@ export function signIn(email: string, password: string): Promise<CognitoUserSess
 }
 
 export function signOut(): void {
+  if (!userPool) return;
   const currentUser = userPool.getCurrentUser();
   if (currentUser) {
     currentUser.signOut();
@@ -84,6 +107,11 @@ export function signOut(): void {
 
 export function getCurrentSession(): Promise<CognitoUserSession | null> {
   return new Promise((resolve) => {
+    if (!userPool) {
+      resolve(null);
+      return;
+    }
+
     const currentUser = userPool.getCurrentUser();
     if (!currentUser) {
       resolve(null);
@@ -102,6 +130,11 @@ export function getCurrentSession(): Promise<CognitoUserSession | null> {
 
 export function getIdToken(): Promise<string | null> {
   return new Promise((resolve) => {
+    if (!userPool) {
+      resolve(null);
+      return;
+    }
+
     const currentUser = userPool.getCurrentUser();
     if (!currentUser) {
       resolve(null);
@@ -119,6 +152,7 @@ export function getIdToken(): Promise<string | null> {
 }
 
 export function getCurrentUser(): AuthUser | null {
+  if (!userPool) return null;
   const currentUser = userPool.getCurrentUser();
   if (!currentUser) return null;
 

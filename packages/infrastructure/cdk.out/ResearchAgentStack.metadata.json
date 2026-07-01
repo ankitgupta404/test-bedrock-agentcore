@@ -1,0 +1,826 @@
+{
+  "/ResearchAgentStack": [
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Custom::S3AutoDeleteObjectsCustomResourceProvider": [
+    {
+      "type": "aws:cdk:is-custom-resource-handler-customResourceProvider",
+      "data": true
+    }
+  ],
+  "/ResearchAgentStack/ApiUrl": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiUrl"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "new ResearchAgentStack (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/stack.ts:35:5)",
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ResearchAgentStack/UserPoolId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "UserPoolId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "new ResearchAgentStack (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/stack.ts:40:5)",
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ResearchAgentStack/UserPoolClientId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "UserPoolClientId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "new ResearchAgentStack (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/stack.ts:45:5)",
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ResearchAgentStack/FrontendBucketName": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "FrontendBucketName"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "new ResearchAgentStack (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/stack.ts:50:5)",
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ResearchAgentStack/DistributionId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DistributionId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "new ResearchAgentStack (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/stack.ts:55:5)",
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ResearchAgentStack/DistributionDomainName": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DistributionDomainName"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "new ResearchAgentStack (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/stack.ts:60:5)",
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ResearchAgentStack/BootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "BootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ResearchAgentStack/CheckBootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CheckBootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Database/Table": [
+    {
+      "type": "aws:cdk:hasPhysicalName",
+      "data": {
+        "Ref": "DatabaseTableF104A135"
+      }
+    }
+  ],
+  "/ResearchAgentStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ResearchAgentStack/CDKMetadata/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadata"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Auth/UserPool/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AuthUserPool8115E87F"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new UserPool2 in aws-cdk-lib...",
+        "new AuthConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/auth-construct.ts:12:21)",
+        "new ResearchAgentStack (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/stack.ts:14:18)",
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Auth/UserPoolClient/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AuthUserPoolClient0AA456E4"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new UserPoolClient2 in aws-cdk-lib...",
+        "new AuthConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/auth-construct.ts:38:27)",
+        "new ResearchAgentStack (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/stack.ts:14:18)",
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Database/Table/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "DatabaseTableF104A135"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Table2 in aws-cdk-lib...",
+        "new DatabaseConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/database-construct.ts:11:18)",
+        "new ResearchAgentStack (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/stack.ts:17:22)",
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Api/HttpApi/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiHttpApi4C294DC0"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new HttpApi2 in aws-cdk-lib...",
+        "new ApiConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/api-construct.ts:34:20)",
+        "new ResearchAgentStack (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/stack.ts:20:17)",
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Api/UsersHandler/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiUsersHandler4166A20C"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new ApiConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/api-construct.ts:70:26)",
+        "new ResearchAgentStack (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/stack.ts:20:17)",
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Api/SummariesHandler/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiSummariesHandler06212930"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new ApiConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/api-construct.ts:79:30)",
+        "new ResearchAgentStack (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/stack.ts:20:17)",
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Api/FeedbackHandler/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiFeedbackHandler3F995F67"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new ApiConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/api-construct.ts:88:29)",
+        "new ResearchAgentStack (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/stack.ts:20:17)",
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Agent/AgentHandler/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AgentAgentHandler5D508803"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new AgentConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/agent-construct.ts:22:26)",
+        "new ResearchAgentStack (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/stack.ts:27:5)",
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Agent/DailySchedule/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AgentDailySchedule36086228"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Rule2 in aws-cdk-lib...",
+        "new AgentConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/agent-construct.ts:55:18)",
+        "new ResearchAgentStack (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/stack.ts:27:5)",
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Agent/DailySchedule/AllowEventRuleResearchAgentStackAgentAgentHandler76870BD9": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AgentDailyScheduleAllowEventRuleResearchAgentStackAgentAgentHandler76870BD9F7A5177B"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.<anonymous> in aws-cdk-lib...",
+        "new AgentConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/agent-construct.ts:67:10)",
+        "new ResearchAgentStack (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/stack.ts:27:5)",
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)",
+        "...node internals, ts-node..."
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Frontend/FrontendBucket/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "FrontendFrontendBucket428B8C09"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Bucket2 in aws-cdk-lib...",
+        "new FrontendConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/frontend-construct.ts:15:19)",
+        "new ResearchAgentStack (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/stack.ts:32:22)",
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    },
+    {
+      "type": "aws:cdk:analytics:mixin",
+      "data": {
+        "mixin": "aws-cdk-lib.aws_s3.mixins.BucketAutoDeleteObjects"
+      }
+    }
+  ],
+  "/ResearchAgentStack/Frontend/Distribution/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "FrontendDistributionC0C89627"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Distribution2 in aws-cdk-lib...",
+        "new FrontendConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/frontend-construct.ts:24:25)",
+        "new ResearchAgentStack (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/stack.ts:32:22)",
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Api/HttpApi/DefaultStage/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiHttpApiDefaultStageE708EF42"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new HttpApi2 in aws-cdk-lib...",
+        "new ApiConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/api-construct.ts:34:20)",
+        "new ResearchAgentStack (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/stack.ts:20:17)",
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)",
+        "...node internals, ts-node..."
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Api/HttpApi/GET--users--me/UsersIntegration-Permission": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiHttpApiGETusersmeUsersIntegrationPermission94257A9A"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        ".../tmp/test-bedrock-agentcore/node_modules/aws-cdk-lib/aws-apigatewayv2/lib/http/api.js:1:96 in aws-cdk-lib...",
+        "Array.map (:)",
+        "...WrappedClass.<anonymous> in aws-cdk-lib...",
+        "new ApiConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/api-construct.ts:98:18)"
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Api/HttpApi/GET--users--me/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiHttpApiGETusersme7DF6436E"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        ".../tmp/test-bedrock-agentcore/node_modules/aws-cdk-lib/aws-apigatewayv2/lib/http/api.js:1:96 in aws-cdk-lib...",
+        "Array.map (:)",
+        "...WrappedClass.<anonymous> in aws-cdk-lib...",
+        "new ApiConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/api-construct.ts:98:18)",
+        "new ResearchAgentStack (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/stack.ts:20:17)",
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Api/HttpApi/CognitoAuthorizer/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiHttpApiCognitoAuthorizerB58DB3E4"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        ".../tmp/test-bedrock-agentcore/node_modules/aws-cdk-lib/aws-apigatewayv2/lib/http/api.js:1:96 in aws-cdk-lib...",
+        "Array.map (:)",
+        "...WrappedClass.<anonymous> in aws-cdk-lib...",
+        "new ApiConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/api-construct.ts:98:18)"
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Api/HttpApi/PUT--users--me/UsersIntegration-Permission": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiHttpApiPUTusersmeUsersIntegrationPermission95792244"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        ".../tmp/test-bedrock-agentcore/node_modules/aws-cdk-lib/aws-apigatewayv2/lib/http/api.js:1:96 in aws-cdk-lib...",
+        "Array.map (:)",
+        "...WrappedClass.<anonymous> in aws-cdk-lib...",
+        "new ApiConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/api-construct.ts:98:18)"
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Api/HttpApi/PUT--users--me/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiHttpApiPUTusersme22C12B3A"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        ".../tmp/test-bedrock-agentcore/node_modules/aws-cdk-lib/aws-apigatewayv2/lib/http/api.js:1:96 in aws-cdk-lib...",
+        "Array.map (:)",
+        "...WrappedClass.<anonymous> in aws-cdk-lib...",
+        "new ApiConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/api-construct.ts:98:18)",
+        "new ResearchAgentStack (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/stack.ts:20:17)",
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Api/HttpApi/GET--summaries/SummariesListIntegration-Permission": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiHttpApiGETsummariesSummariesListIntegrationPermission5AE1BFD4"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        ".../tmp/test-bedrock-agentcore/node_modules/aws-cdk-lib/aws-apigatewayv2/lib/http/api.js:1:96 in aws-cdk-lib...",
+        "Array.map (:)",
+        "...WrappedClass.<anonymous> in aws-cdk-lib...",
+        "new ApiConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/api-construct.ts:106:18)"
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Api/HttpApi/GET--summaries/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiHttpApiGETsummariesE55712B2"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        ".../tmp/test-bedrock-agentcore/node_modules/aws-cdk-lib/aws-apigatewayv2/lib/http/api.js:1:96 in aws-cdk-lib...",
+        "Array.map (:)",
+        "...WrappedClass.<anonymous> in aws-cdk-lib...",
+        "new ApiConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/api-construct.ts:106:18)",
+        "new ResearchAgentStack (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/stack.ts:20:17)",
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Api/HttpApi/GET--summaries--{summaryId}/SummariesGetIntegration-Permission": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiHttpApiGETsummariessummaryIdSummariesGetIntegrationPermission6DB551C7"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        ".../tmp/test-bedrock-agentcore/node_modules/aws-cdk-lib/aws-apigatewayv2/lib/http/api.js:1:96 in aws-cdk-lib...",
+        "Array.map (:)",
+        "...WrappedClass.<anonymous> in aws-cdk-lib...",
+        "new ApiConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/api-construct.ts:113:18)"
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Api/HttpApi/GET--summaries--{summaryId}/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiHttpApiGETsummariessummaryId34E265E2"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        ".../tmp/test-bedrock-agentcore/node_modules/aws-cdk-lib/aws-apigatewayv2/lib/http/api.js:1:96 in aws-cdk-lib...",
+        "Array.map (:)",
+        "...WrappedClass.<anonymous> in aws-cdk-lib...",
+        "new ApiConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/api-construct.ts:113:18)",
+        "new ResearchAgentStack (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/stack.ts:20:17)",
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Api/HttpApi/GET--summaries--{summaryId}--feedback/FeedbackIntegration-Permission": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiHttpApiGETsummariessummaryIdfeedbackFeedbackIntegrationPermission8C2D4F4E"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        ".../tmp/test-bedrock-agentcore/node_modules/aws-cdk-lib/aws-apigatewayv2/lib/http/api.js:1:96 in aws-cdk-lib...",
+        "Array.map (:)",
+        "...WrappedClass.<anonymous> in aws-cdk-lib...",
+        "new ApiConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/api-construct.ts:121:18)"
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Api/HttpApi/GET--summaries--{summaryId}--feedback/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiHttpApiGETsummariessummaryIdfeedback0C5C2E22"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        ".../tmp/test-bedrock-agentcore/node_modules/aws-cdk-lib/aws-apigatewayv2/lib/http/api.js:1:96 in aws-cdk-lib...",
+        "Array.map (:)",
+        "...WrappedClass.<anonymous> in aws-cdk-lib...",
+        "new ApiConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/api-construct.ts:121:18)",
+        "new ResearchAgentStack (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/stack.ts:20:17)",
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Api/HttpApi/POST--summaries--{summaryId}--feedback/FeedbackIntegration-Permission": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiHttpApiPOSTsummariessummaryIdfeedbackFeedbackIntegrationPermission317B91DA"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        ".../tmp/test-bedrock-agentcore/node_modules/aws-cdk-lib/aws-apigatewayv2/lib/http/api.js:1:96 in aws-cdk-lib...",
+        "Array.map (:)",
+        "...WrappedClass.<anonymous> in aws-cdk-lib...",
+        "new ApiConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/api-construct.ts:121:18)"
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Api/HttpApi/POST--summaries--{summaryId}--feedback/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiHttpApiPOSTsummariessummaryIdfeedback20A9AB44"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        ".../tmp/test-bedrock-agentcore/node_modules/aws-cdk-lib/aws-apigatewayv2/lib/http/api.js:1:96 in aws-cdk-lib...",
+        "Array.map (:)",
+        "...WrappedClass.<anonymous> in aws-cdk-lib...",
+        "new ApiConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/api-construct.ts:121:18)",
+        "new ResearchAgentStack (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/stack.ts:20:17)",
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Api/UsersHandler/ServiceRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiUsersHandlerServiceRole13C7D641"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new ApiConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/api-construct.ts:70:26)",
+        "new ResearchAgentStack (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/stack.ts:20:17)",
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)",
+        "...node internals, ts-node..."
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Api/SummariesHandler/ServiceRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiSummariesHandlerServiceRoleD0551341"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new ApiConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/api-construct.ts:79:30)",
+        "new ResearchAgentStack (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/stack.ts:20:17)",
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)",
+        "...node internals, ts-node..."
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Api/FeedbackHandler/ServiceRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiFeedbackHandlerServiceRole7A01C97F"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new ApiConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/api-construct.ts:88:29)",
+        "new ResearchAgentStack (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/stack.ts:20:17)",
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)",
+        "...node internals, ts-node..."
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Agent/AgentHandler/ServiceRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AgentAgentHandlerServiceRole56AF0631"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new AgentConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/agent-construct.ts:22:26)",
+        "new ResearchAgentStack (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/stack.ts:27:5)",
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)",
+        "...node internals, ts-node..."
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Frontend/FrontendBucket/Policy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "FrontendFrontendBucketPolicy9C197D3C"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Bucket2 in aws-cdk-lib...",
+        "new FrontendConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/frontend-construct.ts:15:19)",
+        "new ResearchAgentStack (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/stack.ts:32:22)",
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)"
+      ]
+    },
+    {
+      "type": "aws:cdk:analytics:mixin",
+      "data": {
+        "mixin": "aws-cdk-lib.aws_s3.mixins.BucketPolicyStatements"
+      }
+    }
+  ],
+  "/ResearchAgentStack/Frontend/FrontendBucket/AutoDeleteObjectsCustomResource/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "FrontendFrontendBucketAutoDeleteObjectsCustomResource14730577"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Api/HttpApi/GET--users--me/UsersIntegration/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiHttpApiGETusersmeUsersIntegration9DF13897"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        ".../tmp/test-bedrock-agentcore/node_modules/aws-cdk-lib/aws-apigatewayv2/lib/http/api.js:1:96 in aws-cdk-lib...",
+        "Array.map (:)",
+        "...WrappedClass.<anonymous> in aws-cdk-lib...",
+        "new ApiConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/api-construct.ts:98:18)"
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Api/HttpApi/GET--summaries/SummariesListIntegration/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiHttpApiGETsummariesSummariesListIntegration14034C35"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        ".../tmp/test-bedrock-agentcore/node_modules/aws-cdk-lib/aws-apigatewayv2/lib/http/api.js:1:96 in aws-cdk-lib...",
+        "Array.map (:)",
+        "...WrappedClass.<anonymous> in aws-cdk-lib...",
+        "new ApiConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/api-construct.ts:106:18)"
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Api/HttpApi/GET--summaries--{summaryId}/SummariesGetIntegration/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiHttpApiGETsummariessummaryIdSummariesGetIntegration52303E03"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        ".../tmp/test-bedrock-agentcore/node_modules/aws-cdk-lib/aws-apigatewayv2/lib/http/api.js:1:96 in aws-cdk-lib...",
+        "Array.map (:)",
+        "...WrappedClass.<anonymous> in aws-cdk-lib...",
+        "new ApiConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/api-construct.ts:113:18)"
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Api/HttpApi/GET--summaries--{summaryId}--feedback/FeedbackIntegration/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiHttpApiGETsummariessummaryIdfeedbackFeedbackIntegration951A22D4"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        ".../tmp/test-bedrock-agentcore/node_modules/aws-cdk-lib/aws-apigatewayv2/lib/http/api.js:1:96 in aws-cdk-lib...",
+        "Array.map (:)",
+        "...WrappedClass.<anonymous> in aws-cdk-lib...",
+        "new ApiConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/api-construct.ts:121:18)"
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Api/UsersHandler/ServiceRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiUsersHandlerServiceRoleDefaultPolicy8ECEE2C4"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Api/SummariesHandler/ServiceRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiSummariesHandlerServiceRoleDefaultPolicy0CF31C05"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Api/FeedbackHandler/ServiceRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiFeedbackHandlerServiceRoleDefaultPolicy212EA256"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Agent/AgentHandler/ServiceRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AgentAgentHandlerServiceRoleDefaultPolicyA3341882"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/ResearchAgentStack/Frontend/Distribution/Origin1/S3OriginAccessControl/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "FrontendDistributionOrigin1S3OriginAccessControl96CDF506"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Distribution2 in aws-cdk-lib...",
+        "new FrontendConstruct (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/frontend-construct.ts:24:25)",
+        "new ResearchAgentStack (/tmp/test-bedrock-agentcore/packages/infrastructure/lib/stack.ts:32:22)",
+        "<anonymous> (/tmp/test-bedrock-agentcore/packages/infrastructure/bin/app.ts:7:1)"
+      ]
+    }
+  ]
+}
