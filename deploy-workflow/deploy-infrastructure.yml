@@ -1,0 +1,94 @@
+name: Deploy Infrastructure
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'packages/infrastructure/**'
+      - 'infrastructure/**'
+      - 'packages/backend/**'
+      - 'packages/shared/**'
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: 'Issue number (optional, for tracking)'
+        required: false
+
+permissions:
+  issues: write
+  contents: read
+  id-token: write
+
+env:
+  AWS_REGION: us-west-2
+  NODE_VERSION: '20'
+
+concurrency:
+  group: infra-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_INFRA_DEPLOY_ROLE_ARN }}
+          role-session-name: infra-deploy
+          aws-region: ${{ env.AWS_REGION }}
+          role-duration-seconds: 3600
+          role-skip-session-tagging: true
+
+      - name: Find infrastructure directory
+        id: find-infra
+        run: |
+          if [ -d "packages/infrastructure" ]; then
+            echo "dir=packages/infrastructure" >> $GITHUB_OUTPUT
+          elif [ -d "infrastructure" ]; then
+            echo "dir=infrastructure" >> $GITHUB_OUTPUT
+          elif [ -d "generated-app/infrastructure" ]; then
+            echo "dir=generated-app/infrastructure" >> $GITHUB_OUTPUT
+          else
+            echo "No infrastructure directory found!"
+            exit 1
+          fi
+
+      - name: Install dependencies
+        working-directory: ${{ steps.find-infra.outputs.dir }}
+        run: npm ci || npm install
+
+      - name: CDK Deploy
+        id: deploy
+        working-directory: ${{ steps.find-infra.outputs.dir }}
+        run: |
+          npx cdk deploy --all --require-approval never --outputs-file /tmp/cdk-outputs.json 2>&1 | tee /tmp/deploy.log
+          if [ -f /tmp/cdk-outputs.json ]; then
+            echo "outputs<<EOF" >> $GITHUB_OUTPUT
+            cat /tmp/cdk-outputs.json >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Post deployment result
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Find the merged PR to comment on
+          PR_NUMBER=$(gh pr list --state merged --base main --limit 1 --json number --jq '.[0].number')
+          if [ -z "$PR_NUMBER" ]; then exit 0; fi
+          
+          if [ -f /tmp/cdk-outputs.json ]; then
+            OUTPUTS=$(cat /tmp/cdk-outputs.json | jq -r 'to_entries[] | .value | to_entries[] | "| **\(.key)** | `\(.value)` |"' 2>/dev/null || echo "| No outputs |  |")
+            BODY=$(printf '## ✅ Infrastructure Deployed\n\n| Output | Value |\n|--------|-------|\n%s\n\n*Deployed via GitHub Actions on merge to main*' "$OUTPUTS")
+          else
+            ERROR=$(tail -30 /tmp/deploy.log 2>/dev/null || echo "Unknown error")
+            BODY=$(printf '## ❌ Infrastructure Deploy Failed\n\n```\n%s\n```' "$ERROR")
+          fi
+          gh pr comment "$PR_NUMBER" --body "$BODY" || true
