@@ -63,10 +63,6 @@ jobs:
         working-directory: ${{ steps.find-infra.outputs.dir }}
         run: npm ci || npm install
 
-      - name: CDK Bootstrap (if needed)
-        working-directory: ${{ steps.find-infra.outputs.dir }}
-        run: npx cdk bootstrap aws://239055859299/${{ env.AWS_REGION }} || true
-
       - name: CDK Deploy
         id: deploy
         working-directory: ${{ steps.find-infra.outputs.dir }}
