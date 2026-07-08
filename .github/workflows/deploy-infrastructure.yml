@@ -61,12 +61,22 @@ jobs:
 
       - name: Install dependencies
         working-directory: ${{ steps.find-infra.outputs.dir }}
-        run: npm ci || npm install
+        run: |
+          npm ci || npm install
+          # Ensure esbuild is available for the current platform (needed for Lambda bundling)
+          npx --yes esbuild --version
+
+      - name: Install backend dependencies (for Lambda bundling)
+        run: |
+          if [ -d "packages/backend" ]; then
+            cd packages/backend && npm ci || npm install
+          fi
 
       - name: CDK Deploy
         id: deploy
         working-directory: ${{ steps.find-infra.outputs.dir }}
         run: |
+          set -o pipefail
           npx cdk deploy --all --require-approval never --outputs-file /tmp/cdk-outputs.json 2>&1 | tee /tmp/deploy.log
           if [ -f /tmp/cdk-outputs.json ]; then
             echo "outputs<<EOF" >> $GITHUB_OUTPUT
@@ -79,10 +89,9 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Find the most recently merged PR to comment on
           PR_NUMBER=$(gh pr list --state merged --base main --limit 1 --json number --jq '.[0].number')
 
-          if [ -f /tmp/cdk-outputs.json ]; then
+          if [ -f /tmp/cdk-outputs.json ] && [ -s /tmp/cdk-outputs.json ]; then
             OUTPUTS=$(cat /tmp/cdk-outputs.json | jq -r 'to_entries[] | .value | to_entries[] | "| **\(.key)** | \(.value) |"' 2>/dev/null || echo "| No outputs |  |")
             BODY=$(printf '## ✅ Infrastructure Deployed\n\n| Output | Value |\n|--------|-------|\n%s\n\n*Deployed via GitHub Actions on merge to main*' "$OUTPUTS")
           else
@@ -94,7 +103,6 @@ jobs:
             gh pr comment "$PR_NUMBER" --body "$BODY" || true
           fi
 
-          # Also post to issue if provided
           ISSUE_NUM="${{ github.event.inputs.issue_number }}"
           if [ -n "$ISSUE_NUM" ]; then
             gh issue comment "$ISSUE_NUM" --body "$BODY" || true
